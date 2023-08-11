@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.1/dist/browser-image-compression.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>ImageCompress - Compress Images to 50KB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Image Compressor</h1>
+        <p>Convert any image to 50Kb</p>
+    </header>
+    <main>
+        <section class="upload-section">
+            <h2>Upload Your Image</h2>
+            <p>Choose an image to compress to 50KB.</p>
+            <input type="file" id="imageInput" accept="image/*" onchange="handleImageUpload(event);">
+            <button id="compressButton">Compress</button>
+        </section>
+        <section class="result-section">
+            <h2>Compressed Image</h2>
+            <img id="compressedImage" src="#" alt="Compressed">
+            <a id="downloadLink"  href="#" download="compressed_image.jpg">Download Compressed Image</a>
+        </section>
+        <section class="blog-section">
+            <h2>Latest Blog Posts</h2>
+            <article class="blog-post">
+                <h3>How Image Compression Works</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum...</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="blog-post">
+                <h3>Tips for Optimizing Web Images</h3>
+                <p>Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante...</p>
+                <a href="#">Read More</a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 ImageCompress. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
