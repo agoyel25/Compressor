@@ -1,6 +1,5 @@
 
     const imageInput = document.getElementById("imageInput");
-    const compressButton = document.getElementById("compressButton");
     const compressedImage = document.getElementById("compressedImage");
     const downloadLink = document.getElementById("downloadLink");
 
@@ -25,8 +24,15 @@
           compressedImage.src = src
 
             downloadLink.addEventListener("click", () => {
-                window.location.href = src
+                const f = new File([compressedFile], compressedFile.name, { type: compressedFile.type });
+                const a = document.createElement("a");
+                a.download = f.name;
+                a.href = URL.createObjectURL(f);
+                a.click();
+                document.removeChild(a);
             })
+          const section = document.getElementById('results');
+          section.removeAttribute('hidden');
         } catch (error) {
           console.log(error);
         }
