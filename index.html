@@ -20,12 +20,11 @@
             <h2>Upload Your Image</h2>
             <p>Choose an image to compress to 50KB.</p>
             <input type="file" id="imageInput" accept="image/*" onchange="handleImageUpload(event);">
-            <button id="compressButton">Compress</button>
         </section>
-        <section class="result-section">
+        <section hidden id="results" class="result-section">
             <h2>Compressed Image</h2>
             <img id="compressedImage" src="#" alt="Compressed">
-            <a id="downloadLink"  href="#" download="compressed_image.jpg">Download Compressed Image</a>
+            <a id="downloadLink">Download Compressed Image</a>
         </section>
         <section class="blog-section">
             <h2>Latest Blog Posts</h2>
