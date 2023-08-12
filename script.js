@@ -3,6 +3,14 @@
     const compressedImage = document.getElementById("compressedImage");
     const downloadLink = document.getElementById("downloadLink");
 
+    let dropArea = document.getElementById('drop-area')
+
+  
+  
+  
+
+
+
     async function handleImageUpload(event) {
 
         const imageFile = event.target.files[0];
@@ -31,8 +39,11 @@
                 a.click();
                 document.removeChild(a);
             })
-          const section = document.getElementById('results');
-          section.removeAttribute('hidden');
+          const timeout = setTimeout(() => {
+            const section = document.getElementById('results');
+            section.removeAttribute('hidden');
+            clearTimeout(timeout)
+          }, 5000);
         } catch (error) {
           console.log(error);
         }

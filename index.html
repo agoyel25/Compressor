@@ -17,23 +17,31 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <header >
       <h1>Image Compressor</h1>
       <p>Convert any image to 50Kb</p>
     </header>
-    <main>
+    <main >
       <section class="upload-section">
         <h2>Upload Your Image</h2>
         <p>Choose an image to compress to 50KB.</p>
+
+        <!-- <div class="file-upload-wrapper">
+          <input type="file" id="input-file-now" class="file-upload" />
+        </div> -->
+        <div class="drop-area">
         <input
           type="file"
           id="imageInput"
           accept="image/*"
           onchange="handleImageUpload(event);"
         />
+        </div>
       </section>
+       <div class="loading-bar" id="loader" ></div>
       <section hidden id="results" class="result-section">
         <h2>Compressed Image</h2>
+        <div class="compressed-container">
         <img
           id="compressedImage"
           src="#"
@@ -41,8 +49,11 @@
           width="800px"
           height="800px"
         />
+        
+        </div>
         <a id="downloadLink">Download Compressed Image</a>
       </section>
+      <br>
       <section class="blog-section">
         <h2>Latest Blog Posts</h2>
         <article class="blog-post">
