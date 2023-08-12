@@ -1,48 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.1/dist/browser-image-compression.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.1/dist/browser-image-compression.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>ImageCompress - Compress Images to 50KB</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Image Compressor</h1>
-        <p>Convert any image to 50Kb</p>
+      <h1>Image Compressor</h1>
+      <p>Convert any image to 50Kb</p>
     </header>
     <main>
-        <section class="upload-section">
-            <h2>Upload Your Image</h2>
-            <p>Choose an image to compress to 50KB.</p>
-            <input type="file" id="imageInput" accept="image/*" onchange="handleImageUpload(event);">
-        </section>
-        <section hidden id="results" class="result-section">
-            <h2>Compressed Image</h2>
-            <img id="compressedImage" src="#" alt="Compressed " width="1920px" height="1080px"  >
-            <a id="downloadLink">Download Compressed Image</a>
-        </section>
-        <section class="blog-section">
-            <h2>Latest Blog Posts</h2>
-            <article class="blog-post">
-                <h3>How Image Compression Works</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum...</p>
-                <a href="#">Read More</a>
-            </article>
-            <article class="blog-post">
-                <h3>Tips for Optimizing Web Images</h3>
-                <p>Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante...</p>
-                <a href="#">Read More</a>
-            </article>
-        </section>
+      <section class="upload-section">
+        <h2>Upload Your Image</h2>
+        <p>Choose an image to compress to 50KB.</p>
+        <input
+          type="file"
+          id="imageInput"
+          accept="image/*"
+          onchange="handleImageUpload(event);"
+        />
+      </section>
+      <section hidden id="results" class="result-section">
+        <h2>Compressed Image</h2>
+        <img
+          id="compressedImage"
+          src="#"
+          alt="Compressed "
+          width="800px"
+          height="800px"
+        />
+        <a id="downloadLink">Download Compressed Image</a>
+      </section>
+      <section class="blog-section">
+        <h2>Latest Blog Posts</h2>
+        <article class="blog-post">
+          <h3>How Image Compression Works</h3>
+          <p>
+            Image compression is a technique used to reduce the file size of
+            images while attempting to maintain an acceptable level of visual
+            quality. It's essential for various applications like web
+            development, digital photography, video streaming, and more, as
+            smaller image sizes lead to faster loading times, reduced storage
+            requirements, and improved network performance.
+          </p>
+
+          <h2>1. Lossless Compression</h2>
+          <p>
+            Lossless compression reduces the file size without sacrificing any
+            image quality. This is achieved by encoding redundant or unnecessary
+            data in a more efficient way. Some common lossless compression
+            algorithms are:
+          </p>
+          <ul>
+            <li>
+              Run-Length Encoding (RLE): Replaces sequences of identical pixels
+              with a code that represents the pixel value and the count of
+              consecutive occurrences.
+            </li>
+            <li>
+              Lempel-Ziv-Welch (LZW): Identifies repeating patterns in the image
+              and replaces them with shorter codes, maintaining a dictionary of
+              patterns for efficient encoding.
+            </li>
+            <li>
+              Predictive Coding: Predicts the value of a pixel based on its
+              neighboring pixels and encodes the difference between the
+              predicted and actual pixel values.
+            </li>
+            <li>
+              Huffman Coding: Assigns shorter codes to more frequent pixel
+              values and longer codes to less frequent values, optimizing the
+              overall encoding.
+            </li>
+          </ul>
+
+          <h2>2. Lossy Compression</h2>
+          <p>
+            Lossy compression achieves higher levels of compression by
+            discarding some image data that is deemed less important to human
+            perception. This introduces some loss of image quality, but the goal
+            is to minimize this loss while significantly reducing file size.
+            Common lossy compression techniques include:
+          </p>
+          <ul>
+            <li>
+              Quantization: Reduces the number of distinct colors or color
+              levels in an image, effectively reducing the amount of data
+              required to represent it.
+            </li>
+            <li>
+              Chroma Subsampling: Reduces the resolution of color information
+              while keeping the brightness information intact, resulting in
+              smaller file sizes.
+            </li>
+            <li>
+              Discrete Cosine Transform (DCT): Converts blocks of pixel data
+              into frequency components, allowing for aggressive quantization of
+              higher-frequency components.
+            </li>
+            <li>
+              JPEG Compression: Uses DCT, quantization, and Huffman coding to
+              achieve high compression rates, making it suitable for
+              photographic images.
+            </li>
+          </ul>
+
+          <h2>Choosing Between Lossless and Lossy Compression</h2>
+          <p>
+            The choice between lossless and lossy compression depends on the
+            application and the acceptable trade-off between image quality and
+            file size. Lossless compression is preferred when preserving every
+            detail of an image is crucial, such as in medical imaging or graphic
+            design. Lossy compression is suitable for scenarios where reducing
+            file size is a higher priority than retaining every bit of image
+            data, such as web images or social media posts.
+          </p>
+          <a href="#">Read More</a>
+        </article>
+        <article class="blog-post">
+          <h3>Tips for Optimizing Web Images</h3>
+          <p>
+            Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus
+            ornare ante...
+          </p>
+          <a href="#">Read More</a>
+        </article>
+      </section>
     </main>
     <footer>
-        <p>&copy; 2023 ImageCompress. All rights reserved.</p>
+      <p>&copy; 2023 ImageCompress. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
