@@ -61,7 +61,7 @@ button:hover {
     width: 50%;
     height: 100%;
     object-fit: cover;
-    animation: loadingEffect 5s ease-in;
+    animation: loadingEffect 3s ease-in;
 }
 
 #downloadLink {
@@ -164,7 +164,7 @@ body {
     width: 0;
     height: 4px;
     background-color: #3498db;
-    animation: progressBar 5s ;
+    animation: progressBar 3s ;
   }
   @keyframes loadingEffect {
     0% {

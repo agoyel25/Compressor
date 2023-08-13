@@ -3,7 +3,7 @@
     const compressedImage = document.getElementById("compressedImage");
     const downloadLink = document.getElementById("downloadLink");
 
-    let dropArea = document.getElementById('drop-area')
+ 
 
   
   
@@ -19,7 +19,7 @@
       
         const options = {
           maxSizeMB: 0.04,
-          maxWidthOrHeight: 1920,
+          maxWidthOrHeight: 2100,
           useWebWorker: true,
         }
         try {
@@ -43,7 +43,7 @@
             const section = document.getElementById('results');
             section.removeAttribute('hidden');
             clearTimeout(timeout)
-          }, 5000);
+          }, 2000);
         } catch (error) {
           console.log(error);
         }
@@ -51,15 +51,15 @@
       }
 
     // Animation function for fadeIn effect
-    function fadeIn(element) {
-        let opacity = 0;
-        element.style.display = "block";
+    // function fadeIn(element) {
+    //     let opacity = 0;
+    //     element.style.display = "block";
 
-        const fadeInInterval = setInterval(function () {
-            if (opacity < 1) {
-                opacity += 0.05;
-                element.style.opacity = opacity;
-            } else {
-                clearInterval(fadeInInterval);
-            }
-        }, 50)};
+    //     const fadeInInterval = setInterval(function () {
+    //         if (opacity < 1) {
+    //             opacity += 0.05;
+    //             element.style.opacity = opacity;
+    //         } else {
+    //             clearInterval(fadeInInterval);
+    //         }
+    //     }, 50)};
