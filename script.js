@@ -18,8 +18,8 @@
         console.log(`originalFile size ${imageFile.size / 1024 / 1024} MB`);
       
         const options = {
-          maxSizeMB: 0.04,
-          maxWidthOrHeight: 2100,
+          maxSizeMB: 0.03,
+          maxWidthOrHeight: 720,
           useWebWorker: true,
         }
         try {
